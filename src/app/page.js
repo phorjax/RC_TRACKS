@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div className="mx-14 px-11 h-25 w-72">
+      <div className="mx-14 px-11 h-25 w-72 ">
         <img  classname="object-cover" src="./rc_logo.png" />
       </div>
       <div className="mx-14 font">
