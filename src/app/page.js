@@ -1,8 +1,21 @@
+"use client";
+import { useMemo } from "react";
+import {GoogleApiWrapper} from ".//components/map.jsx";
+
+
+
+
+
 
 export default function Home() {
+
+
+
+
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <nav className="bg-stone-200 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <main className="flex min-h-screen flex-col items-center justify-between px-60 py-28">
+      <nav className="bg-stone-300 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
           <a className="flex items-center">
             <img src="./rc_logo.png" className="h-16 mr-3" />
@@ -22,8 +35,7 @@ export default function Home() {
             className="items-end justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-stone-200 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-stone-200 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-             
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-stone-200 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-stone-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <a
                   href="#"
@@ -61,12 +73,14 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div className="mx-14 px-11 h-25 w-72 ">
-        <img  classname="object-cover" src="./rc_logo.png" />
+      <div className="mx-14 px-11 h-25 w-72">
+        <img className="object-cover" src="./rc_logo.png" />
       </div>
       <div className="mx-14 font">
         <div className="m-12">
-          <h1 className="italic text-2xl bold my-5 tracking-wider">Quienes somos</h1>
+          <h1 className="italic text-2xl bold my-5 tracking-wider">
+            Quienes somos
+          </h1>
           <p className="tracking-wider">
             Somos una empresa dedicada al desarrollo de productos y servicios
             para el entretenimiento familiar, con nuestro producto principal,
@@ -75,17 +89,25 @@ export default function Home() {
           </p>
         </div>
         <div className="m-12">
-          <h1 className="italic text-2xl bold my-5 tracking-wider">Servicio que proveemos</h1>
+          <h1 className="italic text-2xl bold my-5 tracking-wider">
+            Servicio que proveemos
+          </h1>
           <p className="tracking-wider">
             Alquiler de carros 4x4 para conducir en nuestras pistas ubicadas de
             centros comerciales. Destinado para ninos, Jovenes y Adultos
           </p>
         </div>
         <div className="m-12">
-          <h1 className="italic text-2xl bold my-5 tracking-wider">Donde nos pueden encontrar</h1>
+          <h1 className="italic text-2xl bold my-5 tracking-wider">
+            Donde nos pueden encontrar
+          </h1>
           <p className="tracking-wider">
-            Florida parque comercial, segundo pisto al lado de crepes and waffles
+            Florida parque comercial, segundo pisto al lado de
+            crepes and waffles
           </p>
+        </div>
+        <div>
+        <MapContainer />
         </div>
       </div>
     </main>
