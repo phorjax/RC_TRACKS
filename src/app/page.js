@@ -1,14 +1,16 @@
 "use client";
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { useMemo } from "react";
-import {GoogleApiWrapper} from ".//components/map.jsx";
-
 
 
 
 
 
 export default function Home() {
-
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
+  const center = useMemo(() => ({ lat:6.270932528366708,  lng: -75.57752374552615 }), []);
 
 
 
@@ -73,10 +75,10 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div className="mx-14 px-11 h-25 w-72">
+      <div className="mx-5 h-25 w-72">
         <img className="object-cover" src="./rc_logo.png" />
       </div>
-      <div className="mx-14 font">
+      <div className="mx-5 font">
         <div className="m-12">
           <h1 className="italic text-2xl bold my-5 tracking-wider">
             Quienes somos
@@ -106,9 +108,19 @@ export default function Home() {
             crepes and waffles
           </p>
         </div>
-        <div>
-        <MapContainer />
-        </div>
+        <div className="App">
+      {!isLoaded ? (
+        <h1>Loading...</h1>
+      ) : (
+        <GoogleMap
+          mapContainerClassName="map-container"
+          center={center}
+          zoom={10}
+        >
+          <Marker position={{ lat:6.270932528366708,  lng: -75.57752374552615 }} />
+        </GoogleMap>
+      )}
+    </div>
       </div>
     </main>
   );
