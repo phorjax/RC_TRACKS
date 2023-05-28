@@ -14,7 +14,6 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -27,6 +26,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background-image: url("../../public/background.jpg");
   background-repeat:no-repeat;
+  scroll-behavior: smooth;
   background-size: cover;
   /* background: linear-gradient(
       to bottom,
@@ -50,4 +50,11 @@ h1, span{
 }
 .app{
   padding-left: 100px;
+}
+.textBox{
+  border: 1px solid #98a830;
+  background-color: #d2d2d2;
+  overflow: auto;
+  padding: 1em!important;
+  overflow-y: hidden
 }
