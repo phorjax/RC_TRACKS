@@ -6,8 +6,8 @@
   font-family: "american_captainregular";
   src: url('../../fonts/americancaptain-webfont.woff')format('woff'),
   url('../../fonts/americancaptain-webfont.woff2')format('woff2'),
-  url('../../fonts/americancaptain.ttf')format('truetype'),
-  url('../../fonts/americancaptain.otf')format('opentype');
+  url('../../fonts/AmericanCaptain.ttf')format('truetype'),
+  url('../../fonts/AmericanCaptain.otf')format('opentype');
 }
 :root {
   --foreground-rgb: 0, 0, 0;
