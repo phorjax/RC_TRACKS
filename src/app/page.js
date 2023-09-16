@@ -14,11 +14,12 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
-                                                                     {/* NAV BAR */}
+      {/* NAV BAR */}
       <nav className="bg-stone-200 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
           <a className="flex items-center">
-            <Image alt="RC TRACKS logo" src="./rc_logo.png" className="h-16 mr-3" />
+            <Image alt="RC TRACKS logo" src="/rc_logo.png" width={70}
+              height={30} />
             <span className="self-center text-2xl  whitespace-nowrap dark:text-white specialFont">
               RC TRACKS
             </span>
@@ -73,11 +74,12 @@ export default function Home() {
           </div>
         </div>
       </nav>
-                                                                {/* Banner */}
+      {/* Banner */}
       <div className="mx-5 h-25 w-72">
-        <Image alt="RC TRACKS logo" className="object-cover" src="./rc_logo.png" />
+      <Image alt="RC TRACKS logo" src="/rc_logo.png" width={300}
+              height={100} />
       </div>
-                                                                  {/* TEXT */}
+      {/* TEXT */}
       <div className="textBox mx-60 ">
         <div className="m-12" id="quieneSomos">
           <h1 className="italic text-2xl bold my-5 tracking-wider">
@@ -108,7 +110,7 @@ export default function Home() {
             crepes and waffles
           </p>
         </div>
-                                                               {/* Google maps */}
+        {/* Google maps */}
         <div className="App m-12">
           {!isLoaded ? (
             <h1>Loading...</h1>
@@ -134,38 +136,40 @@ export default function Home() {
             y practica. Diferentes tipos de superficies y obstáculos para
             superar.
           </p>
-          <Image alt='RC TRACKS logo' className="object-cover" src="./ilustracion.jpg" />
+          <Image alt='RC TRACKS ilustration' className="object-cover" width={300}
+              height={200} src="/ilustracion.jpg" />
         </div>
       </div>
-                                                            {/* footer */}
-<footer className="bg-stone-100  shadow dark:bg-gray-900  w-full">
-  <div className="container mx-auto px-4 py-8">
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-      <a  className="flex items-center mb-4 sm:mb-0">
-        <Image src="./rc_logo.png" className="h-8 mr-3" alt="RC TRACKS Logo" />
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RC TRACKS</span>
-      </a>
-      <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">Acerca de RC TRACKS</a>
-        </li>
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">Terminos y condiciones</a>
-        </li>
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">Trabaje con nosotros</a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline">Contactenos</a>
-        </li>
-      </ul>
-    </div>
-    <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a className="hover:underline">RCTRACKS™</a>. All Rights Reserved.</span>
-  </div>
-</footer>
+      {/* footer */}
+      <footer className="bg-stone-100  shadow dark:bg-gray-900  w-full">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <a className="flex items-center mb-4 sm:mb-0">
+            <Image alt="RC TRACKS logo" src="/rc_logo.png" width={100}
+              height={30} />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RC TRACKS</span>
+            </a>
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                <a href="#" className="mr-4 hover:underline md:mr-6">Acerca de RC TRACKS</a>
+              </li>
+              <li>
+                <a href="#" className="mr-4 hover:underline md:mr-6">Terminos y condiciones</a>
+              </li>
+              <li>
+                <a href="#" className="mr-4 hover:underline md:mr-6">Trabaje con nosotros</a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">Contactenos</a>
+              </li>
+            </ul>
+          </div>
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a className="hover:underline">RCTRACKS™</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
 
     </main>
-    
+
   );
 }
