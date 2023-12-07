@@ -109,19 +109,7 @@ export default function Home() {
         </div>
                                                                {/* Google maps */}
         <div className="App m-12">
-          {!isLoaded ? (
-            <h1>Loading...</h1>
-          ) : (
-            <GoogleMap
-              mapContainerClassName="map-container"
-              center={center}
-              zoom={10}
-            >
-              <Marker
-                position={{ lat: 6.270932528366708, lng: -75.57752374552615 }}
-              />
-            </GoogleMap>
-          )}
+          
         </div>
         <div className="m-12">
           <h1 className="italic text-2xl bold my-5 tracking-wider" id="caracteristicas">
